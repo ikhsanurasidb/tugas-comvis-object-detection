@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hasil Deteksi - YOLOv8</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .image-container {
+        margin: 20px 0;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      .back-button {
+        margin: 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hasil Deteksi Objek</h1>
+    <div class="image-container">
+      <h2>Gambar Input:</h2>
+      <img
+        src="{{ url_for('static', filename=input_image) }}"
+        alt="Input Image"
+      />
+    </div>
+    <div class="image-container">
+      <h2>Hasil Deteksi:</h2>
+      <img
+        src="{{ url_for('static', filename=output_image) }}"
+        alt="Result Image"
+      />
+    </div>
+    <div class="back-button">
+      <a href="/">Kembali ke Upload</a>
+    </div>
+  </body>
+</html>
